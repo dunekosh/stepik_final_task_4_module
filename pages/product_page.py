@@ -9,13 +9,11 @@ class ProductPage(BasePage):
 
     def compare_name(self):
         alert_name = self.browser.find_element(*ProductPageLocators.ALERT_NAME).text
-        print(alert_name)
         name = self.browser.find_element(*ProductPageLocators.NAME).text
         assert alert_name == name, "The name in the basket does not match"
 
     def compare_price(self):
         alert_price = self.browser.find_element(*ProductPageLocators.ALERT_PRICE).text
-        print(alert_price)
         price = self.browser.find_element(*ProductPageLocators.PRICE).text
         assert alert_price == price, "The price in the basket does not match"
 
